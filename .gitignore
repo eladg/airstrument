@@ -1,3 +1,6 @@
 node_modules/
 build/*.js
 .vscode/
+
+# app distribution
+dist/

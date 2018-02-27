@@ -8,9 +8,9 @@ const BrowserWindow = Electron.BrowserWindow;
 let window;
 
 function createWindow () {
-	window = new BrowserWindow({});
+	window = new BrowserWindow({width: 960, height: 600});
 
-	window.maximize();
+	// window.maximize();
 
 	window.loadURL(Url.format({
 		pathname: Path.join(__dirname, './build/index.html'),
@@ -18,7 +18,7 @@ function createWindow () {
 		slashes: true
 	}));
 
-	//window.webContents.openDevTools();
+	// window.webContents.openDevTools();
 
 	window.on('closed', () => {
 		window = null;

@@ -1,31 +1,41 @@
 {
-    "name": "desktop-3d-app-boilerplate",
-    "version": "1.1.0",
-    "description": "Boilerplate to make 3d desktop & web applications with Electron & Three & Webpack & Typescript & Babel",
-    "repository": "PerthuisQuentin/desktop-3d-app-boilerplate",
-    "author": {
-        "name": "Quentin Perthuis"
-    },
-    "scripts": {
-        "build": "./node_modules/.bin/webpack --progress --colors",
-        "dev": "./node_modules/.bin/webpack-dev-server --progress --colors --open",
-        "app": "./node_modules/.bin/electron ./electron.js",
-        "eslint": "./node_modules/.bin/eslint . --ext ts,js"
-    },
-    "devDependencies": {
-        "webpack": "^3.8.1",
-        "webpack-dev-server": "^2.9.5",
-        "webpack-bundle-analyzer": "^2.9.1",
-        "html-webpack-plugin": "^2.30.1",
-        "electron": "^1.7.9",
-        "typescript": "^2.6.2",
-        "ts-loader": "^3.2.0",
-        "babel-core": "^6.26.0",
-        "babel-loader": "^7.1.2",
-        "babel-preset-es2015-native-modules": "^6.9.4",
-        "eslint": "^4.12.1",
-        "typescript-eslint-parser": "^10.0.0",
-        "three": "^0.88.0",
-        "@types/three": "^0.84.33"
+  "name": "Airstrument",
+  "version": "0.1.0",
+  "description": "Airstrument",
+  "repository": "eladg/airstrument",
+  "author": {
+    "name": "Elad Gariany"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/webpack -w --progress --colors",
+    "dev": "./node_modules/.bin/webpack-dev-server --progress --colors --open",
+    "app": "./node_modules/.bin/electron",
+    "eslint": "./node_modules/.bin/eslint . --ext ts,js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"    
+  },
+  "build": {
+    "appId": "com.gariany.airstrument",
+    "mac": {
+      "category": "your.app.category.type"
     }
+  },  
+  "devDependencies": {
+    "@types/three": "^0.84.33",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "electron": "^1.7.9",
+    "electron-builder": "^20.2.0",
+    "eslint": "^4.12.1",
+    "html-webpack-plugin": "^2.30.1",
+    "three": "^0.88.0",
+    "webpack": "^3.8.1",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-dev-server": "^2.9.5"
+  },
+  "dependencies": {
+    "tone": "^0.11.11"
+  }
 }

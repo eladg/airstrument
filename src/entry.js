@@ -1,8 +1,19 @@
 import * as THREE from 'three';
 
-import { scene, camera, update } from './content';
+import { scene, camera, update, raycaster } from './content';
 
-var renderer: THREE.WebGLRenderer;
+import { Mouse } from './mouse';
+var renderer = THREE.WebGLRenderer;
+
+var userMouse = new Mouse();
+userMouse.addEventListener(document);
+
+var updateOptions = {
+  renderer: renderer,
+  scene: scene,
+  camera: camera,
+  mouse: userMouse,
+}
 
 init();
 animate();
@@ -15,6 +26,6 @@ function init() {
 
 function animate() {
 	requestAnimationFrame(animate);
-	update();
+	update(updateOptions);
 	renderer.render(scene, camera);
 }
